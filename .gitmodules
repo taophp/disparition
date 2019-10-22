@@ -1,0 +1,3 @@
+[submodule "res/scroollify"]
+	path = res/scroollify
+	url = https://github.com/lukehaas/Scrollify.git
