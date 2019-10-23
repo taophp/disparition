@@ -4,9 +4,9 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
 		<title>Disparition - Stéphane Mourey</title>
+		<script src="res/jquery-3.4.1.min.js"></script>
+		<script src="res/scrollify/jquery.scrollify.js"></script>
 		<style>
-
-@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
 
 html, body {
 	height: 100%;
@@ -293,7 +293,6 @@ div#page1 div#page1 span:nth-of-type(21) {
           animation-delay: 5.1s;
 }
 		</style>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script>
 	function goToByScroll(id) {
     $('html,body').animate({
@@ -304,16 +303,34 @@ div#page1 div#page1 span:nth-of-type(21) {
 		);
 	}
 	$(function(){
-		if (location.hash==='' || location.hash==='#') {
+		if (location.hash==='' || location.hash==='#' || location.hash==='#1' || location.hash==='#page1') {
 			setTimeout(function(){
-				goToByScroll('page2');
+				$.scrollify.move('#page2');
 			},9000);
 		}
+		$.scrollify({
+			section:'.page',
+			sectionName : "section-name",
+			interstitialSection : "",
+			easing: "easeOutExpo",
+			scrollSpeed: 1100,
+			offset : 0,
+			scrollbars: true,
+			standardScrollElements: "",
+			setHeights: true,
+			overflowScroll: true,
+			updateHash: true,
+			touchScroll:true,
+			before:function() {},
+			after:function() {},
+			afterResize:function() {},
+			afterRender:function() {}
+		});
 	});
 </script>
 	</head>
 	<body>
-		<div id="page1" class="screen" style="
+		<div class="page" id="page1" data-section-name="page1" style="
 		background:#000;
 		color:#fff;
 		display: -ms-flexbox;
@@ -343,7 +360,7 @@ div#page1 div#page1 span:nth-of-type(21) {
 		</div>
 
 
-		<div id="page2" class="screen" style="    display: -ms-flexbox;
+		<div class="page" data-section-name="page2" style="    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -374,7 +391,7 @@ div#page1 div#page1 span:nth-of-type(21) {
 		</div>
 
 
-		<div id="page3" class="screen">
+		<div class="page">
 <div class="pagecontainer">
 			<p>Quelques jours plus tôt, dans un parc, il avait rencontré une amie d’enfance perdue de vue bien des années auparavant. Il s’était assis sur un banc, son regard perdu sur des enfants à une aire de jeux. Elle s’installa sur le banc voisin du sien, puis commença à lire un livre en mangeant un sandwich. Ses yeux tombèrent sur elle sans s’y arrêter tout d’abord, puis y revinrent plus longuement. L’expression de son visage changea. Il se leva et se dirigea vers elle.</p>
 <p>— Excusez-moi, madame, ne seriez-vous pas... ?</p>
