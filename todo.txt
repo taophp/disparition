@@ -1,0 +1,2 @@
+* appliquer [Letteging.js](http://letteringjs.com/) pour le titre
+* essayer d'appliquer une fonction avant et après scroolify pour masquer le scroll et le remplacer par un effet de floutage/defloutage (et d'éclaircissement/assombrissement)
