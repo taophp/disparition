@@ -1,3 +1,6 @@
 [submodule "res/scroollify"]
 	path = res/scrollify
 	url = https://github.com/lukehaas/Scrollify.git
+[submodule "res/jquery-cssHooks"]
+	path = res/jquery-cssHooks
+	url = https://github.com/brandonaaron/jquery-cssHooks.git
